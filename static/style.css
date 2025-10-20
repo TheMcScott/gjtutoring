@@ -1,0 +1,61 @@
+html {
+  cursor: url("maus.png"), auto;
+}
+
+a:hover {
+  cursor: url("pointer.png"), pointer;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #FCFC02;
+  position: fixed;
+  justify-content: top;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.gibjohn {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  color: #19F3CF;
+}
+
+ul li a.active {
+  color: #04AA6D;
+}
+
+body {
+  background-color: #F319BD;
+}
+
+.noto-sans-bhaiksuki-regular {
+  font-family: "Noto Sans Bhaiksuki", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html * {
+  font-family: "BBH Sans Bartle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
