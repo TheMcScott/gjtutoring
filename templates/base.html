@@ -1,31 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>{% block title %}Gibjohn Tutoring{% endblock %}</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{% block title %}Gibjohn Tutoring{% endblock %}</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <!-- Site stylesheet -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  {% block head %}{% endblock %}
 </head>
 <body>
-    <ul>
-        <li><a href="{{ url_for('index') }}">Home</a></li>
-        <li><a href="{{ url_for('profile') }}">Profile</a></li>
-        <li><a href="{{ url_for('contact') }}">Contact</a></li>
-        <li><a href="{{ url_for('about') }}">About</a></li>
-        <li style="float:right" class="gibjohn">
-            <img src="{{ url_for('static', filename='gibjohn.png') }}" height="42px" width="auto" alt="Gibjohn logo">
-        </li>
-    </ul>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="nav-brand" href="{{ url_for('index') }}">Gibjohn Tutoring</a>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">☰</button>
+      <ul class="nav-list">
+        <li><a href="{{ url_for('index') }}" class="{% if request.path == url_for('index') %}active{% endif %}">Home</a></li>
+        <li><a href="{{ url_for('profile') }}" class="{% if request.path == url_for('profile') %}active{% endif %}">Profile</a></li>
+        <li><a href="{{ url_for('contact') }}" class="{% if request.path == url_for('contact') %}active{% endif %}">Contact</a></li>
+        <li><a href="{{ url_for('about') }}" class="{% if request.path == url_for('about') %}active{% endif %}">About</a></li>
+      </ul>
+      <div class="nav-right">
+        <img src="{{ url_for('static', filename='gibjohn.png') }}" height="36" alt="Gibjohn logo">
+      </div>
+    </nav>
+  </header>
 
-    <main>
-        {% block content %}
-        {% endblock %}
-    </main>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© {{ current_year if 'current_year' in globals() else 'Gibjohn Tutoring' }}</small>
+    </div>
+  </footer>
+
+  <script>
+    // small helper to close mobile nav when a link is clicked
+    document.addEventListener('click', function(e) {
+      if (e.target.matches('.nav-list a')) document.body.classList.remove('nav-open');
+    });
+  </script>
+
+  {% block scripts %}{% endblock %}
 </body>
 </html>
