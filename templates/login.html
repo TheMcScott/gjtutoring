@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Login — Gibjohn Tutoring{% endblock %}
+
+{% block content %}
+<div class="page-container">
+  <div class="container">
+    <div class="content">
+      <div class="login-form-section">
+        <h2>Log In</h2>
+        <form class="login-form">
+          <div class="login-group">
+            <label>Name</label>
+            <input type="text" name="name" placeholder="Your name" required>
+          </div>
+          
+          <div class="login-group">
+            <label>Email</label>
+            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+          </div>
+          
+          <div class="login-group">
+            <label>Password</label>
+            <input type="text" name="Password" placeholder="Password" required>
+          </div>
+          
+          <div class="login-group">
+            <label>Confirm Password</label>
+            <input type="text" name="Confirm" placeholder="Password" required>
+          </div>
+
+          
+          <button type="submit" class="btn btn-primary">Log In</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

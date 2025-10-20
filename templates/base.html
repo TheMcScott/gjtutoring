@@ -25,6 +25,7 @@
         <li><a href="{{ url_for('profile') }}" class="{% if request.path == url_for('profile') %}active{% endif %}">Profile</a></li>
         <li><a href="{{ url_for('about') }}" class="{% if request.path == url_for('about') %}active{% endif %}">About</a></li>
         <li><a href="{{ url_for('contact') }}" class="{% if request.path == url_for('contact') %}active{% endif %}">Contact</a></li>
+        <li><a href="{{ url_for('login') }}" class="{% if request.path == url_for('login') %}active{% endif %}">Log-in</a></li>
       </ul>
       <div class="nav-right">
         <img src="{{ url_for('static', filename='gibjohn.png') }}" height="36" alt="Gibjohn logo">
