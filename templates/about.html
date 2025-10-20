@@ -4,16 +4,94 @@
 
 {% block content %}
 <div class="page-container">
-  <div class="content">
-    <h1>About Gibjohn Tutoring</h1>
-    <p>We offer personalized tutoring with a focus on understanding concepts, building confidence, and achieving lasting results.</p>
+  <div class="container">
+    <div class="content">
+      <h1>About Gibjohn Tutoring</h1>
+      <p class="lead">We offer personalized tutoring with a focus on understanding concepts, building confidence, and achieving lasting results.</p>
 
-    <h2>Our approach</h2>
-    <ul>
-      <li>Assess current level</li>
-      <li>Create personalized lesson plans</li>
-      <li>Track progress and adapt</li>
-    </ul>
+      <section class="about-section">
+        <h2>Our Mission</h2>
+        <p>At Gibjohn Tutoring, we believe that every student has the potential to excel. Our mission is to provide high-quality, personalized education that empowers students to reach their academic goals and develop a lifelong love of learning.</p>
+      </section>
+
+      <section class="about-section">
+        <h2>Our Approach</h2>
+        <div class="approach-grid">
+          <div class="card approach-card">
+            <div class="approach-number">1</div>
+            <h3>Assess Current Level</h3>
+            <p>We begin by understanding your current knowledge and identifying areas that need attention.</p>
+          </div>
+          <div class="card approach-card">
+            <div class="approach-number">2</div>
+            <h3>Create Personalized Plans</h3>
+            <p>Develop customized lesson plans tailored to your learning style and goals.</p>
+          </div>
+          <div class="card approach-card">
+            <div class="approach-number">3</div>
+            <h3>Track Progress & Adapt</h3>
+            <p>Monitor your progress regularly and adjust strategies to ensure continuous improvement.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <h2>Meet Our Team</h2>
+        <div class="team-grid">
+          <div class="card team-card">
+            <div class="team-image">
+              <img src="{{ url_for('static', filename='images/team1.svg') }}" alt="Team member 1">
+            </div>
+            <h3>John Gibson</h3>
+            <p class="team-role">Lead Tutor & Founder</p>
+            <p>Math, Science, and Test Prep specialist with 10+ years of experience.</p>
+          </div>
+          <div class="card team-card">
+            <div class="team-image">
+              <img src="{{ url_for('static', filename='images/team2.svg') }}" alt="Team member 2">
+            </div>
+            <h3>Sarah Mitchell</h3>
+            <p class="team-role">English & Writing Tutor</p>
+            <p>Expert in literature, essay writing, and language arts instruction.</p>
+          </div>
+          <div class="card team-card">
+            <div class="team-image">
+              <img src="{{ url_for('static', filename='images/team3.svg') }}" alt="Team member 3">
+            </div>
+            <h3>David Chen</h3>
+            <p class="team-role">STEM Tutor</p>
+            <p>Specialized in advanced mathematics, physics, and computer science.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-section">
+        <h2>Our Impact</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">200+</div>
+            <div class="stat-label">Students Helped</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">95%</div>
+            <div class="stat-label">Success Rate</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">4.9/5</div>
+            <div class="stat-label">Average Rating</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="cta-section">
+        <h3>Ready to join us?</h3>
+        <a class="btn btn-primary" href="{{ url_for('contact') }}">Contact Us</a>
+      </div>
+    </div>
   </div>
 </div>
 {% endblock %}

@@ -1,0 +1,25 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f0f4f8"/>
+  
+  <!-- Sad face circle -->
+  <circle cx="200" cy="150" r="100" fill="#C59EEF" opacity="0.3"/>
+  
+  <!-- Eyes -->
+  <circle cx="175" cy="130" r="8" fill="#498055"/>
+  <circle cx="225" cy="130" r="8" fill="#498055"/>
+  
+  <!-- Sad mouth -->
+  <path d="M 160 180 Q 200 160 240 180" stroke="#498055" stroke-width="4" fill="none" stroke-linecap="round"/>
+  
+  <!-- 404 Text -->
+  <text x="200" y="260" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#498055" text-anchor="middle">404</text>
+  
+  <!-- Decorative elements -->
+  <circle cx="60" cy="60" r="20" fill="#19F3CF" opacity="0.3"/>
+  <circle cx="340" cy="240" r="25" fill="#19F3CF" opacity="0.3"/>
+  
+  <!-- Question marks -->
+  <text x="90" y="200" font-family="Arial, sans-serif" font-size="36" fill="#C59EEF" opacity="0.5">?</text>
+  <text x="320" y="100" font-family="Arial, sans-serif" font-size="36" fill="#C59EEF" opacity="0.5">?</text>
+</svg>
