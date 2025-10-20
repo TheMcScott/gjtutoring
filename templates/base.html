@@ -37,7 +37,11 @@
 
   <footer class="site-footer">
     <div class="container">
-      <small>© {{ current_year if 'current_year' in globals() else 'Gibjohn Tutoring' }}</small>
+      {% if current_year is defined %}
+        <small>© {{ current_year }}</small>
+      {% else %}
+        <small>© Gibjohn Tutoring</small>
+      {% endif %}
     </div>
   </footer>
 
