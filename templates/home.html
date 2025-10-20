@@ -1,14 +1,35 @@
 {% extends "base.html" %}
 
-{% block title %}Gibjohn Tutoring{% endblock %}
+{% block title %}Home — Gibjohn Tutoring{% endblock %}
 
 {% block content %}
-<div class="page-container">
-  <div class="content">
-    <img src="{{ url_for('static', filename='gibjojh.jpg') }}" alt="Gibjohn" style="width:100%; height:auto;">
-    <p>
-      i am gibjohn and i am your tutor <br><br> please give me your money
-    </p>
-  </div>
+<div class="container page-container">
+  <section class="hero card">
+    <div class="hero-inner">
+      <div class="hero-media">
+        <img src="{{ url_for('static', filename='gibjojh.jpg') }}" alt="Gibjohn" />
+      </div>
+      <div class="hero-copy">
+        <h1>Personal tutoring that works</h1>
+        <p>One-on-one sessions, tailored lessons, and measurable progress. Learn with confidence.</p>
+        <a class="btn" href="{{ url_for('contact') }}">Book a session</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container content-grid">
+    <article class="card">
+      <h3>Experienced tutor</h3>
+      <p>Practical teaching methods and patient guidance.</p>
+    </article>
+    <article class="card">
+      <h3>Flexible scheduling</h3>
+      <p>Online or in-person lessons available.</p>
+    </article>
+    <article class="card">
+      <h3>Results-driven</h3>
+      <p>Focused sessions that target improvement areas.</p>
+    </article>
+  </section>
 </div>
 {% endblock %}

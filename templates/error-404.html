@@ -1,12 +1,16 @@
 {% extends "base.html" %}
 
-{% block title %}Uh oh!{% endblock %}
+{% block title %}Page not found{% endblock %}
 
 {% block content %}
-<div class="page-container">
-  <div class="content" style="text-align:center;">
-    <p style="font-size:6rem; margin:0;">You got error 404!</p>
-    <img src="{{ url_for('static', filename='404.png') }}" alt="404" style="max-width:100%; height:auto; margin-top:1rem;">
+<div class="container page-container">
+  <div class="card content-card" style="text-align:center;">
+    <h1>404 — Page not found</h1>
+    <p>We couldn't find the page you're looking for.</p>
+    <a class="btn" href="{{ url_for('index') }}">Return home</a>
+    <div style="margin-top:1rem;">
+      <img src="{{ url_for('static', filename='404.png') }}" alt="404 illustration" style="max-width:320px; width:60%;">
+    </div>
   </div>
 </div>
 {% endblock %}
