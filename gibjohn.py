@@ -1,9 +1,15 @@
 from flask import Flask, render_template, redirect, url_for
+from datetime import datetime
 
 app = Flask(__name__)
 
+# Make the current year available to all templates
+@app.context_processor
+def inject_current_year():
+    return {"current_year": datetime.utcnow().year}
+
 @app.errorhandler(404)
- def handle_404_error(e):
+def handle_404_error(e):
     return render_template("error-404.html"), 404
 
 @app.route("/")
