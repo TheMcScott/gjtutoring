@@ -28,24 +28,23 @@ ul li a {
   text-decoration: none;
 }
 
-.gibjohn {
+gibjohn {
   display: block;
   color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
-
 ul li a:hover {
   color: #19F3CF;
 }
-
 ul li a.active {
   color: #04AA6D;
 }
 
 body {
   background-color: #F319BD;
+  padding-top: 60px;
 }
 
 .noto-sans-bhaiksuki-regular {
@@ -58,4 +57,40 @@ html * {
   font-family: "BBH Sans Bartle", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+/* Centered layout: page container + content card */
+.page-container {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.content {
+  width: 100%;
+  max-width: 980px;
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(20,20,30,0.06);
+  border-radius: 8px;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.content h1, .content p {
+  margin-top: 0;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 540px) {
+  .content {
+    padding: 1rem;
+    border-radius: 6px;
+  }
 }
