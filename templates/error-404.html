@@ -1,26 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Uh oh!</title>
-    <link rel="stylesheet" href="static/style.css">
+{% extends "base.html" %}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap" rel="stylesheet">
-</head>
-<body>
-  <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="profile.html">Profile</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="about.html">About</a></li>
-    <li style="float:right" class="gibjohn"><img src="static/gibjohn.png" height="42px" alt=""></li>
-  </ul>
+{% block title %}Uh oh!{% endblock %}
 
-<p style="font-size:15em"> You got error 404!</p>
-
-<audio autoplay loop src="https://open.spotify.com/embed/track/1TEZWG1FdjzDdercCguTwj?utm_source=generator"></audio>
-<img src="static/404.png" style="width:100vw; height:100vh">
-</body>
-</html>
+{% block content %}
+<div class="page-container">
+  <div class="content" style="text-align:center;">
+    <p style="font-size:6rem; margin:0;">You got error 404!</p>
+    <img src="{{ url_for('static', filename='404.png') }}" alt="404" style="max-width:100%; height:auto; margin-top:1rem;">
+  </div>
+</div>
+{% endblock %}
