@@ -21,9 +21,10 @@
       <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">☰</button>
       <ul class="nav-list">
         <li><a href="{{ url_for('index') }}" class="{% if request.path == url_for('index') %}active{% endif %}">Home</a></li>
+        <li><a href="{{ url_for('services') }}" class="{% if request.path == url_for('services') %}active{% endif %}">Services</a></li>
         <li><a href="{{ url_for('profile') }}" class="{% if request.path == url_for('profile') %}active{% endif %}">Profile</a></li>
-        <li><a href="{{ url_for('contact') }}" class="{% if request.path == url_for('contact') %}active{% endif %}">Contact</a></li>
         <li><a href="{{ url_for('about') }}" class="{% if request.path == url_for('about') %}active{% endif %}">About</a></li>
+        <li><a href="{{ url_for('contact') }}" class="{% if request.path == url_for('contact') %}active{% endif %}">Contact</a></li>
       </ul>
       <div class="nav-right">
         <img src="{{ url_for('static', filename='gibjohn.png') }}" height="36" alt="Gibjohn logo">

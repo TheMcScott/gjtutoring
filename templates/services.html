@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %}Services — Gibjohn Tutoring{% endblock %}
+
+{% block content %}
+<div class="page-container">
+  <div class="container">
+    <div class="content">
+      <h1>Our Services</h1>
+      <p class="lead">Comprehensive tutoring services tailored to your learning needs</p>
+
+      <div class="services-grid">
+        <article class="card service-card">
+          <div class="service-icon">📚</div>
+          <h3>One-on-One Tutoring</h3>
+          <p>Personalized sessions focused on your specific learning goals and challenges. Available both online and in-person.</p>
+          <ul class="service-features">
+            <li>Customized lesson plans</li>
+            <li>Flexible scheduling</li>
+            <li>Regular progress reports</li>
+          </ul>
+          <div class="service-price">Starting at $50/hour</div>
+        </article>
+
+        <article class="card service-card">
+          <div class="service-icon">👥</div>
+          <h3>Group Sessions</h3>
+          <p>Small group tutoring sessions (2-4 students) for collaborative learning and peer support.</p>
+          <ul class="service-features">
+            <li>Cost-effective option</li>
+            <li>Interactive learning</li>
+            <li>Build study groups</li>
+          </ul>
+          <div class="service-price">Starting at $30/hour per student</div>
+        </article>
+
+        <article class="card service-card">
+          <div class="service-icon">📝</div>
+          <h3>Test Preparation</h3>
+          <p>Specialized coaching for standardized tests including SAT, ACT, GRE, and more.</p>
+          <ul class="service-features">
+            <li>Test-taking strategies</li>
+            <li>Practice materials</li>
+            <li>Score improvement focus</li>
+          </ul>
+          <div class="service-price">Starting at $60/hour</div>
+        </article>
+
+        <article class="card service-card">
+          <div class="service-icon">🎓</div>
+          <h3>Homework Help</h3>
+          <p>Regular support with daily assignments and projects to ensure you stay on track.</p>
+          <ul class="service-features">
+            <li>Quick turnaround</li>
+            <li>Concept clarification</li>
+            <li>Study skills development</li>
+          </ul>
+          <div class="service-price">Starting at $40/hour</div>
+        </article>
+
+        <article class="card service-card">
+          <div class="service-icon">💼</div>
+          <h3>College Prep</h3>
+          <p>Comprehensive support for college applications, essays, and admissions planning.</p>
+          <ul class="service-features">
+            <li>Essay review and editing</li>
+            <li>Application strategy</li>
+            <li>Interview preparation</li>
+          </ul>
+          <div class="service-price">Custom packages available</div>
+        </article>
+
+        <article class="card service-card">
+          <div class="service-icon">🌟</div>
+          <h3>Subject Specialization</h3>
+          <p>Expert tutoring in Mathematics, Science, English, History, and Foreign Languages.</p>
+          <ul class="service-features">
+            <li>All grade levels</li>
+            <li>Advanced placement</li>
+            <li>Subject mastery</li>
+          </ul>
+          <div class="service-price">Starting at $50/hour</div>
+        </article>
+      </div>
+
+      <div class="cta-section">
+        <h2>Not sure which service is right for you?</h2>
+        <p>Contact us for a free consultation to discuss your learning goals.</p>
+        <a class="btn btn-primary" href="{{ url_for('contact') }}">Get in Touch</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

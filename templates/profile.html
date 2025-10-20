@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Profile — Gibjohn Tutoring{% endblock %}
+
+{% block content %}
+<div class="page-container">
+  <div class="container">
+    <div class="content">
+      <h1>Meet Your Tutor</h1>
+      
+      <div class="profile-header">
+        <div class="profile-image">
+          <img src="{{ url_for('static', filename='images/team1.svg') }}" alt="Gibjohn tutor profile">
+        </div>
+        <div class="profile-info">
+          <h2>John Gibson</h2>
+          <p class="profile-title">Lead Tutor & Founder</p>
+          <p>With over 10 years of experience in education, John is passionate about helping students unlock their full potential through personalized, engaging tutoring sessions.</p>
+        </div>
+      </div>
+
+      <div class="profile-section">
+        <h2>Qualifications & Experience</h2>
+        <ul class="styled-list">
+          <li>Master's Degree in Education</li>
+          <li>10+ years of tutoring experience</li>
+          <li>Specialized in Math, Science, and English</li>
+          <li>Certified in multiple teaching methodologies</li>
+          <li>Successfully helped 200+ students improve their grades</li>
+        </ul>
+      </div>
+
+      <div class="profile-section">
+        <h2>Teaching Philosophy</h2>
+        <p>I believe that every student has the ability to succeed with the right guidance and support. My approach focuses on:</p>
+        <ul class="styled-list">
+          <li><strong>Understanding:</strong> Building a solid foundation of core concepts</li>
+          <li><strong>Confidence:</strong> Creating a supportive environment where mistakes are learning opportunities</li>
+          <li><strong>Progress:</strong> Setting clear goals and celebrating achievements</li>
+          <li><strong>Engagement:</strong> Making learning interesting and relevant to real life</li>
+        </ul>
+      </div>
+
+      <div class="cta-section">
+        <h3>Ready to get started?</h3>
+        <a class="btn btn-primary" href="{{ url_for('contact') }}">Book a Session</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

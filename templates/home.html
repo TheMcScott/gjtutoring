@@ -3,33 +3,52 @@
 {% block title %}Home — Gibjohn Tutoring{% endblock %}
 
 {% block content %}
-<div class="container page-container">
-  <section class="hero card">
-    <div class="hero-inner">
-      <div class="hero-media">
-        <img src="{{ url_for('static', filename='gibjojh.jpg') }}" alt="Gibjohn" />
+<div class="page-container">
+  <div class="container">
+    <section class="hero-section">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Personal Tutoring That Works</h1>
+          <p class="lead">One-on-one sessions, tailored lessons, and measurable progress. Learn with confidence and achieve your academic goals.</p>
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="{{ url_for('contact') }}">Book a Session</a>
+            <a class="btn btn-secondary" href="{{ url_for('services') }}">View Services</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="{{ url_for('static', filename='images/hero.svg') }}" alt="Tutoring illustration" />
+        </div>
       </div>
-      <div class="hero-copy">
-        <h1>Personal tutoring that works</h1>
-        <p>One-on-one sessions, tailored lessons, and measurable progress. Learn with confidence.</p>
-        <a class="btn" href="{{ url_for('contact') }}">Book a session</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="container content-grid">
-    <article class="card">
-      <h3>Experienced tutor</h3>
-      <p>Practical teaching methods and patient guidance.</p>
-    </article>
-    <article class="card">
-      <h3>Flexible scheduling</h3>
-      <p>Online or in-person lessons available.</p>
-    </article>
-    <article class="card">
-      <h3>Results-driven</h3>
-      <p>Focused sessions that target improvement areas.</p>
-    </article>
-  </section>
+    <section class="features-section">
+      <h2>Why Choose Gibjohn Tutoring?</h2>
+      <div class="content-grid">
+        <article class="card feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3>Experienced Tutor</h3>
+          <p>Practical teaching methods and patient guidance from an educator with over 10 years of experience.</p>
+        </article>
+        <article class="card feature-card">
+          <div class="feature-icon">⏰</div>
+          <h3>Flexible Scheduling</h3>
+          <p>Online or in-person lessons available at times that work for your busy schedule.</p>
+        </article>
+        <article class="card feature-card">
+          <div class="feature-icon">📈</div>
+          <h3>Results-Driven</h3>
+          <p>Focused sessions that target improvement areas and deliver measurable academic progress.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="card cta-card">
+        <h2>Ready to Start Learning?</h2>
+        <p>Join hundreds of students who have improved their grades and confidence.</p>
+        <a class="btn btn-primary" href="{{ url_for('contact') }}">Get Started Today</a>
+      </div>
+    </section>
+  </div>
 </div>
 {% endblock %}

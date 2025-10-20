@@ -20,14 +20,17 @@ def index():
 def about():
     return render_template("about.html")
 
-# lightweight stubs for nav links so url_for resolves (replace with real pages later)
 @app.route("/profile")
 def profile():
-    return redirect(url_for("index"))
+    return render_template("profile.html")
 
 @app.route("/contact")
 def contact():
-    return redirect(url_for("index"))
+    return render_template("contact.html")
+
+@app.route("/services")
+def services():
+    return render_template("services.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
