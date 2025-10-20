@@ -11,8 +11,8 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #FCFC02;
-  position: fixed;
+  background-color: #C59EEF;
+  position: sticky;
   justify-content: top;
 }
 
@@ -39,11 +39,11 @@ ul li a:hover {
   color: #19F3CF;
 }
 ul li a.active {
-  color: #04AA6D;
+  color: #498055;
 }
 
 body {
-  background-color: #F319BD;
+  background-color: #DFD3B7;
   padding-top: 60px;
 }
 
